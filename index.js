@@ -29,3 +29,6 @@
 //insertion - O(log n)
 //searching - O(log n)
 //not guarunteed -- some configs  O(N) if only one sided
+
+//DFS in order gets numbers sorted
+//DFS pre order good for reconstructing trees

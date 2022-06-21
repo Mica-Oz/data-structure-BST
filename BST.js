@@ -96,6 +96,36 @@ class BinarySearchTree {
     traverse(current);
     return visited;
   }
+  DFSPostOrder() {
+    let visited = [];
+    let current = this.root;
+    function traverse(node) {
+      if (node.left) {
+        traverse(node.left);
+      }
+      if (node.right) {
+        traverse(node.right);
+      }
+      visited.push(node.val);
+    }
+    traverse(current);
+    return visited;
+  }
+  DFSInOrder() {
+    let visited = [];
+    let current = this.root;
+    function traverse(node) {
+      if (node.left) {
+        traverse(node.left);
+      }
+      visited.push(node.val);
+      if (node.right) {
+        traverse(node.right);
+      }
+    }
+    traverse(current);
+    return visited;
+  }
 }
 
 class Node {
@@ -107,7 +137,3 @@ class Node {
 }
 
 let tree = new BinarySearchTree();
-tree.root = new Node(10);
-tree.root.right = new Node(15);
-tree.root.left = new Node(7);
-tree.root.left.right = new Node(9);
