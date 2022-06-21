@@ -24,3 +24,8 @@
 
 //the way that we order them makes it very easy and fast to look things up and insert
 //searching is quicker, < or > logic at the nodes
+
+//Big O
+//insertion - O(log n)
+//searching - O(log n)
+//not guarunteed -- some configs  O(N) if only one sided
